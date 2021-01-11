@@ -94,18 +94,22 @@ source $ZSH/oh-my-zsh.sh
 # -- Utilities -- 
 alias restart="exec $SHELL -l"
 
+alias agents="launchctl list | grep nathansbud"
+alias daemons="sudo launchctl list | grep nathansbud"
+
 alias av="source venv/bin/activate"
 alias p="python3"
 
 alias la="ls -A"
-
 alias gs="git status"
 
 alias dechrome="pkill -f \"Google Chrome\"; pkill -f \"chromedriver\";"
 alias denode="pkill -f \"node\";"
 
 # -- Quick CDs -- 
-alias c="cd /Users/zackamiton/Code/"
+alias c="/Users/zackamiton/Code/"
+alias cla="/Users/zackamiton/Library/LaunchAgents/"
+alias cld="/Library/LaunchDaemons/"
 
 # -- Run Scripts -- 
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
