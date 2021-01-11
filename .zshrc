@@ -1,0 +1,1 @@
+/Users/zackamiton/.zshrc
