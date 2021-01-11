@@ -99,6 +99,8 @@ alias p="python3"
 
 alias la="ls -A"
 
+alias gs="git status"
+
 alias dechrome="pkill -f \"Google Chrome\"; pkill -f \"chromedriver\";"
 alias denode="pkill -f \"node\";"
 
