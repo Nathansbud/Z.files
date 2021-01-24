@@ -97,7 +97,7 @@ alias restart="exec $SHELL -l"
 alias agents="launchctl list | grep nathansbud"
 alias daemons="sudo launchctl list | grep nathansbud"
 
-alias av="source venv/bin/activate"
+alias sv="source venv/bin/activate"
 alias p="python3"
 
 alias la="ls -A"
@@ -113,8 +113,16 @@ alias cld="/Library/LaunchDaemons/"
 
 # -- Run Scripts -- 
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
+
+alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
+alias calc="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
+alias calculator="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
+
 alias bgg="/Users/zackamiton/Code/BGGCLI/bgg.py"
+alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
 alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py"
+alias rules="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
+alias jockey="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
 
 # [EXPORTS]
 
