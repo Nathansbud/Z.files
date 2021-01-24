@@ -1,1 +1,2 @@
 set whichwrap+=<,>,[,]
+syntax on
