@@ -68,7 +68,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git 
+    #zsh-autosuggestions
+)
+#[PLUGIN VARS]
+#ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,6 +93,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+#[ENV]
+HISTORY_IGNORE='(history)'
+
 
 #[ALIASES]
 
@@ -118,7 +127,7 @@ alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculat
 alias calc="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
 alias calculator="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
 
-alias bgg="/Users/zackamiton/Code/BGGCLI/bgg.py"
+alias bgg="/Users/zackamiton/Code/BGGCLI/venv/bin/python3 /Users/zackamiton/Code/BGGCLI/bgg.py"
 alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
 alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py"
 alias rules="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
