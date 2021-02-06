@@ -112,14 +112,16 @@ alias p="python3"
 alias la="ls -A"
 alias gs="git status"
 
-alias dechrome="pkill -f \"Google Chrome\"; pkill -f \"chromedriver\";"
-alias denode="pkill -f \"node\";"
+alias dechrome="pkill -f 'Google Chrome'; pkill -f 'chromedriver'"
+alias denode="pkill -f 'node'"
 
+alias github="hub browse > /dev/null 2>&1 || open 'https://github.com/Nathansbud' -a 'Google Chrome'"
 # -- Quick CDs -- 
 alias c="/Users/zackamiton/Code/"
 alias cla="/Users/zackamiton/Library/LaunchAgents/"
 alias cld="/Library/LaunchDaemons/"
-
+# -- Quick Workflows --
+alias start-mabel="osascript /Users/zackamiton/Code/Termcontrol/'Mabel Workflow.applescript'"
 # -- Run Scripts -- 
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
 
