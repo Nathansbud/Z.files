@@ -97,6 +97,10 @@ source $ZSH/oh-my-zsh.sh
 #[ENV]
 HISTORY_IGNORE='(history)'
 
+# [EXPORTS]
+
+export c="/Users/zackamiton/Code/"
+
 
 #[ALIASES]
 
@@ -107,7 +111,7 @@ alias agents="launchctl list | grep nathansbud"
 alias daemons="sudo launchctl list | grep nathansbud"
 
 alias sv="source venv/bin/activate"
-alias p="python3"
+alias p="ipython3"
 
 alias la="ls -A"
 alias gs="git status"
@@ -120,8 +124,10 @@ alias github="hub browse > /dev/null 2>&1 || open 'https://github.com/Nathansbud
 alias c="/Users/zackamiton/Code/"
 alias cla="/Users/zackamiton/Library/LaunchAgents/"
 alias cld="/Library/LaunchDaemons/"
+
 # -- Quick Workflows --
-alias start-mabel="osascript /Users/zackamiton/Code/Termcontrol/'Mabel Workflow.applescript'"
+alias start-mabel="osascript '/Users/zackamiton/Code/AutomationNonsense/iTerm/Mabel Workflow.applescript'"
+
 # -- Run Scripts -- 
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
 
@@ -134,8 +140,7 @@ alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamito
 alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py"
 alias rules="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
 alias jockey="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
-
-# [EXPORTS]
+alias ignoramus="/Users/zackamiton/Code/Ignoramus/venv/bin/python3 /Users/zackamiton/Code/Ignoramus/maker.py"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
