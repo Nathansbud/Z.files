@@ -68,14 +68,19 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+#[PLUGIN VARS]
 plugins=(
     git 
-    #zsh-autosuggestions
+    # zsh-autosuggestions
 )
-#[PLUGIN VARS]
-#ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
 source $ZSH/oh-my-zsh.sh
+
+
+
+# ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# not working rn idk why
+# bindkey "^[^I" autocomplete-execute
 
 # User configuration
 
@@ -106,6 +111,8 @@ export c="/Users/zackamiton/Code/"
 
 # -- Utilities -- 
 alias restart="exec $SHELL -l"
+alias config="open ~/.zshrc"
+alias sysp='open -a "System Preferences"'
 
 alias agents="launchctl list | grep nathansbud"
 alias daemons="sudo launchctl list | grep nathansbud"
@@ -119,7 +126,10 @@ alias gs="git status"
 alias dechrome="pkill -f 'Google Chrome'; pkill -f 'chromedriver'"
 alias denode="pkill -f 'node'"
 
+alias allow='(){xattr -d com.apple.quarantine $1}'
+
 alias github="hub browse > /dev/null 2>&1 || open 'https://github.com/Nathansbud' -a 'Google Chrome'"
+alias timecard="open 'https://docs.google.com/spreadsheets/d/1OdUv6iKJhJ_6hoBFO5TCuVV1kzAfOgDW1kR11vH4qWE/' -a 'Google Chrome'"
 # -- Quick CDs -- 
 alias c="/Users/zackamiton/Code/"
 alias cla="/Users/zackamiton/Library/LaunchAgents/"
@@ -138,6 +148,7 @@ alias calculator="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/ca
 alias bgg="/Users/zackamiton/Code/BGGCLI/venv/bin/python3 /Users/zackamiton/Code/BGGCLI/bgg.py"
 alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
 alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py"
+alias tracks="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py -a"
 alias rules="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
 alias jockey="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
 alias ignoramus="/Users/zackamiton/Code/Ignoramus/venv/bin/python3 /Users/zackamiton/Code/Ignoramus/maker.py"
