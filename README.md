@@ -1,3 +1,3 @@
 # Z.files
 
-It's...my dotfiles, lul
+Various dotfiles and preference files that I want to keep around 🕶
