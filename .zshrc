@@ -106,7 +106,6 @@ HISTORY_IGNORE='(history)'
 
 export c="/Users/zackamiton/Code/"
 
-
 #[ALIASES]
 
 # -- Utilities -- 
@@ -121,6 +120,7 @@ alias sv="source venv/bin/activate"
 alias p="ipython3"
 
 alias la="ls -A"
+alias lsd="ls -d -- */"
 alias gs="git status"
 
 alias dechrome="pkill -f 'Google Chrome'; pkill -f 'chromedriver'"
@@ -130,27 +130,21 @@ alias allow='(){xattr -d com.apple.quarantine $1}'
 
 alias github="hub browse > /dev/null 2>&1 || open 'https://github.com/Nathansbud' -a 'Google Chrome'"
 alias timecard="open 'https://docs.google.com/spreadsheets/d/1OdUv6iKJhJ_6hoBFO5TCuVV1kzAfOgDW1kR11vH4qWE/' -a 'Google Chrome'"
+
 # -- Quick CDs -- 
 alias c="/Users/zackamiton/Code/"
 alias cla="/Users/zackamiton/Library/LaunchAgents/"
 alias cld="/Library/LaunchDaemons/"
 
-# -- Quick Workflows --
-alias start-mabel="osascript '/Users/zackamiton/Code/AutomationNonsense/iTerm/Mabel Workflow.applescript'"
-
 # -- Run Scripts -- 
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
 
 alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
-alias calc="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
-alias calculator="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
 
 alias bgg="/Users/zackamiton/Code/BGGCLI/venv/bin/python3 /Users/zackamiton/Code/BGGCLI/bgg.py"
 alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
 alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py"
 alias tracks="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py -a"
-alias rules="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
-alias jockey="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/jockey.py"
 alias ignoramus="/Users/zackamiton/Code/Ignoramus/venv/bin/python3 /Users/zackamiton/Code/Ignoramus/maker.py"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
