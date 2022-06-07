@@ -1,0 +1,16 @@
+[user]
+    name = Zack Amiton
+    email = zamiton@outlook.com
+[credential]
+    helper = osxkeychain
+[push]
+    default = current
+[pull]
+    rebase = false
+[core]
+    excludesfile = ~/.gitignore
+[filter "lfs"]
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f

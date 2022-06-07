@@ -1,0 +1,9 @@
+.env
+credentials/
+
+.DS_Store
+.vscode/
+.idea/
+
+venv/
+__pycache__/
