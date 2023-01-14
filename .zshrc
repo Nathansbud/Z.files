@@ -102,7 +102,11 @@ source $ZSH/oh-my-zsh.sh
 #[ENV]
 HISTORY_IGNORE='(history)'
 
-# [EXPORTS]
+#[PATH ADDITIONS]
+
+PATH="/Applications/CMake.app/Contents/bin":"$PATH"
+
+#[EXPORTS]
 
 export c="/Users/zackamiton/Code/"
 
@@ -127,12 +131,14 @@ alias dechrome="pkill -f 'Google Chrome'; pkill -f 'chromedriver'"
 alias denode="pkill -f 'node'"
 
 alias allow='(){xattr -d com.apple.quarantine $1}'
+alias clone='(){git clone $1 && cd $(basename $_ .git)}'
 
 alias github="hub browse > /dev/null 2>&1 || open 'https://github.com/Nathansbud' -a 'Google Chrome'"
-alias timecard="open 'https://docs.google.com/spreadsheets/d/1OdUv6iKJhJ_6hoBFO5TCuVV1kzAfOgDW1kR11vH4qWE/' -a 'Google Chrome'"
 
 # -- Quick CDs -- 
 alias c="/Users/zackamiton/Code/"
+alias s="/Users/zackamiton/Code/BrownCS"
+alias site="/Users/zackamiton/Code/Zamiton/webapp"
 alias cla="/Users/zackamiton/Library/LaunchAgents/"
 alias cld="/Library/LaunchDaemons/"
 
@@ -143,9 +149,16 @@ alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculat
 
 alias bgg="/Users/zackamiton/Code/BGGCLI/venv/bin/python3 /Users/zackamiton/Code/BGGCLI/bgg.py"
 alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
+alias q="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -st"
+
 alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py"
-alias tracks="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py -a"
-alias ignoramus="/Users/zackamiton/Code/Ignoramus/venv/bin/python3 /Users/zackamiton/Code/Ignoramus/maker.py"
+
+alias graphics="/Users/zackamiton/Code/BrownCS/Graphics/projects/flowerful"
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -7,3 +7,5 @@ credentials/
 
 venv/
 __pycache__/
+
+compiled/drracket/
