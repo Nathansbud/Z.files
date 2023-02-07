@@ -156,6 +156,9 @@ alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamit
 alias graphics="/Users/zackamiton/Code/BrownCS/Gradphics/projects/Path"
 alias cv="/Users/zackamiton/miniconda3/envs/cs1430/bin/python"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Credit: https://www.growingwiththeweb.com/2018/01/slow-nvm-init.html, modified to use whence (type not in zsh)
 # Defer initialization of nvm until nvm, node or a node-dependent command is
 # run. Ensure this block is only run once if .bashrc gets sourced multiple times
@@ -163,7 +166,11 @@ alias cv="/Users/zackamiton/miniconda3/envs/cs1430/bin/python"
 if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(whence -w __init_nvm)" = function ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-  declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
+  declare -a __node_commands=(
+    'nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack' 
+    # need to add aliases for npm-requiring commands
+    'git open'
+    )
   function __init_nvm() {
     for i in "${__node_commands[@]}"; do unalias $i; done
     . "$NVM_DIR"/nvm.sh
@@ -187,6 +194,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
