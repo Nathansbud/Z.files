@@ -2,10 +2,13 @@
 credentials/
 
 .DS_Store
-.vscode/
 .idea/
 
 venv/
 __pycache__/
 
 compiled/drracket/
+*.dSYM
+
+.vscode/
+*.code-workspace.code-workspace
