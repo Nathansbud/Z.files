@@ -71,8 +71,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #[PLUGIN VARS]
 plugins=(
-    git 
-    # zsh-autosuggestions
+    git
+    git-open 
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -121,6 +121,7 @@ alias agents="launchctl list | grep nathansbud"
 alias daemons="sudo launchctl list | grep nathansbud"
 
 alias sv="source venv/bin/activate"
+alias se="deactivate &> /dev/null"
 alias p="ipython3"
 
 alias la="ls -A"
@@ -150,11 +151,14 @@ alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculat
 alias bgg="/Users/zackamiton/Code/BGGCLI/venv/bin/python3 /Users/zackamiton/Code/BGGCLI/bgg.py"
 alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
 alias q="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -st"
+alias qw="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -w"
 
 alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py"
 
-alias graphics="/Users/zackamiton/Code/BrownCS/Gradphics/projects/Path"
-alias cv="/Users/zackamiton/miniconda3/envs/cs1430/bin/python"
+alias graphics="/Users/zackamiton/Code/BrownCS/Gradphics/projects/Mesh"
+alias cv="/Users/zackamiton/Code/BrownCS/CV/"
+alias cvp="/Users/zackamiton/miniconda3/envs/cs1430/bin/python"
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -179,6 +183,11 @@ if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(whence -w __init_nvm)" = function ]; the
   }
   for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
 fi
+
+# bring back "slower" NVM because dropdown console starts npm anyways at launch
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

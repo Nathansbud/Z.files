@@ -12,3 +12,5 @@ compiled/drracket/
 
 .vscode/
 *.code-workspace.code-workspace
+.gdb_history
+
