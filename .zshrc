@@ -112,7 +112,7 @@ export c="/Users/zackamiton/Code/"
 
 #[ALIASES]
 
-# -- Utilities -- 
+# -- [Utilities] -- 
 alias restart="exec $SHELL -l"
 alias config="open ~/.zshrc"
 alias sysp='open -a "System Preferences"'
@@ -136,29 +136,30 @@ alias clone='(){git clone $1 && cd $(basename $_ .git)}'
 
 alias github="hub browse > /dev/null 2>&1 || open 'https://github.com/Nathansbud' -a 'Google Chrome'"
 
-# -- Quick CDs -- 
+# -- [Quick CDs] -- 
 alias c="/Users/zackamiton/Code/"
 alias s="/Users/zackamiton/Code/BrownCS"
 alias site="/Users/zackamiton/Code/Zamiton/webapp"
 alias cla="/Users/zackamiton/Library/LaunchAgents/"
 alias cld="/Library/LaunchDaemons/"
 
-# -- Run Scripts -- 
-alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
-
-alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
-
-alias bgg="/Users/zackamiton/Code/BGGCLI/venv/bin/python3 /Users/zackamiton/Code/BGGCLI/bgg.py"
-alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
-alias q="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -st"
-alias qw="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -w"
-
-alias lyrics="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py"
-
-alias graphics="/Users/zackamiton/Code/BrownCS/Gradphics/projects/Mesh"
+# - Current Courses - 
+alias graphics="/Users/zackamiton/Code/BrownCS/Gradphics/projects/Cubosity"
 alias cv="/Users/zackamiton/Code/BrownCS/CV/"
 alias cvp="/Users/zackamiton/miniconda3/envs/cs1430/bin/python"
 
+# -- [Run Scripts] --
+alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
+alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
+alias bgg="/Users/zackamiton/Code/BGGCLI/venv/bin/python3 /Users/zackamiton/Code/BGGCLI/bgg.py"
+
+# - Queue -
+alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
+alias q="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -st"
+alias qw="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -w"
+alias qq="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -q"
+alias qs="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py --share -i"
+alias qsa="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py --share APPLE -i"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
