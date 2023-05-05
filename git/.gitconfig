@@ -5,6 +5,7 @@
     helper = osxkeychain
 [push]
     default = current
+    autoSetupRemote = true
 [pull]
     rebase = false
 [core]
@@ -14,3 +15,5 @@
     process = git-lfs filter-process
     required = true
     clean = git-lfs clean -- %f
+[init]
+    defaultBranch = main
