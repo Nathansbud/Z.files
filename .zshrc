@@ -143,23 +143,34 @@ alias site="/Users/zackamiton/Code/Zamiton/webapp"
 alias cla="/Users/zackamiton/Library/LaunchAgents/"
 alias cld="/Library/LaunchDaemons/"
 
-# - Current Courses - 
-alias graphics="/Users/zackamiton/Code/BrownCS/Gradphics/projects/Cubosity"
-alias cv="/Users/zackamiton/Code/BrownCS/CV/"
-alias cvp="/Users/zackamiton/miniconda3/envs/cs1430/bin/python"
+# Program Paths
+TUNINGFORK=(/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py)
+LYRICS=(/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/lyrics.py)
+BGG=(/Users/zackamiton/Code/BoredGamer/venv/bin/python3 /Users/zackamiton/Code/BoredGamer/bgg.py)
 
-# -- [Run Scripts] --
+# Quickpaths
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
 alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"
-alias bgg="/Users/zackamiton/Code/BGGCLI/venv/bin/python3 /Users/zackamiton/Code/BGGCLI/bgg.py"
 
-# - Queue -
-alias queue="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py"
-alias q="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -st"
-alias qw="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -w"
-alias qq="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py -q"
-alias qs="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py --share -i"
-alias qsa="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/Code/TuningFork/enqueue.py --share APPLE -i"
+# TuningFork Aliases
+function q()   { $TUNINGFORK -st $@ }
+function qw()  { $TUNINGFORK -w }
+function qq()  { $TUNINGFORK -q }
+function qn()  { $TUNINGFORK -n $@ }
+function qs()  { $TUNINGFORK --save $@ }
+function qp()  { $TUNINGFORK --playpause }
+function qa()  { for v ($@) $TUNINGFORK $v }
+function qc()  { $TUNINGFORK $@ --share }
+function qca() { $TUNINGFORK $@ --share APPLE }
+function qrl() { $TUNINGFORK -x LIBRARY -# -1 $@ }    
+function qrb() { $TUNINGFORK -x BACKLOG -# -1 $@ }    
+
+# Lyrics Aliases
+function lyrics() { $LYRICS $@ | less; }
+function ql() { $LYRICS }
+
+# BGG Aliases
+function bgg() { $BGG $@ }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -168,21 +179,22 @@ alias qsa="/Users/zackamiton/Code/TuningFork/venv/bin/python3 /Users/zackamiton/
 # Defer initialization of nvm until nvm, node or a node-dependent command is
 # run. Ensure this block is only run once if .bashrc gets sourced multiple times
 # by checking whether __init_nvm is a function.
+
 if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(whence -w __init_nvm)" = function ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-  declare -a __node_commands=(
-    'nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack' 
-    # need to add aliases for npm-requiring commands
-    'git open'
-    )
-  function __init_nvm() {
-    for i in "${__node_commands[@]}"; do unalias $i; done
-    . "$NVM_DIR"/nvm.sh
-    unset __node_commands
-    unset -f __init_nvm
-  }
-  for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
+ export NVM_DIR="$HOME/.nvm"
+ [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+ declare -a __node_commands=(
+   'nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack' 
+   # need to add aliases for npm-requiring commands
+   'git open'
+   )
+ function __init_nvm() {
+   for i in "${__node_commands[@]}"; do unalias $i; done
+   . "$NVM_DIR"/nvm.sh
+   unset __node_commands
+   unset -f __init_nvm
+ }
+ for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
 fi
 
 # bring back "slower" NVM because dropdown console starts npm anyways at launch
@@ -194,13 +206,13 @@ fi
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/zackamiton/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+   eval "$__conda_setup"
 else
-    if [ -f "/Users/zackamiton/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/zackamiton/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/zackamiton/miniconda3/bin:$PATH"
-    fi
+   if [ -f "/Users/zackamiton/miniconda3/etc/profile.d/conda.sh" ]; then
+       . "/Users/zackamiton/miniconda3/etc/profile.d/conda.sh"
+   else
+       export PATH="/Users/zackamiton/miniconda3/bin:$PATH"
+   fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
