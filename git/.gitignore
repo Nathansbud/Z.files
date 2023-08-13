@@ -14,3 +14,4 @@ compiled/drracket/
 *.code-workspace.code-workspace
 .gdb_history
 
+*.swp
