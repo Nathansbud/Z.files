@@ -1,0 +1,5 @@
+export c="/Users/zackamiton/Code/"
+export s="/Users/zackamiton/Code/BrownCS"
+export site="/Users/zackamiton/Code/Zamiton/webapp"
+export cla="/Users/zackamiton/Library/LaunchAgents/"
+export cld="/Library/LaunchDaemons/"
