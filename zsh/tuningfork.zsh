@@ -16,8 +16,8 @@ function qn()  { $_TUNINGFORK -n $@ }
 function qs()  { $_TUNINGFORK --save $@ }
 function qp()  { $_TUNINGFORK --playpause }
 function qa()  { for v ($@) $_TUNINGFORK $v }
-function qc()  { $_TUNINGFORK $@ --share }
-function qca() { $_TUNINGFORK $@ --share APPLE }
+function qc()  { $_TUNINGFORK -st $@ --share }
+function qca() { $_TUNINGFORK -st $@ --share APPLE }
 function qrl() { $_TUNINGFORK -x LIBRARY -# -1 $@ }    
 function qrb() { $_TUNINGFORK -x BACKLOG -# -1 $@ }
 
