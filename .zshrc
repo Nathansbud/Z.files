@@ -29,7 +29,6 @@ alias denode="pkill -f 'node'"
 
 # Quickpaths
 alias inkscape="/Applications/Inkscape.app/Contents/MacOS/inkscape"
-alias math="python3 -i /Users/zackamiton/Code/PythonNonsense/Calculator/calculator.py"  
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
