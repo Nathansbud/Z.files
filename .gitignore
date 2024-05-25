@@ -1,0 +1,6 @@
+playground.zsh
+
+# Using Docker to create an install script, rather than messing with my actual files
+Dockerfile
+_debug/
+_trash/

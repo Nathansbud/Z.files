@@ -1,8 +1,37 @@
 {
-	"DEFAULT_PLAYLIST": "2bQJC2lUa4pXkAt2qQejlx",
-	"ALBUM_PLAYLIST": "79mpaUsn0LPGUyCkBRnSgZ",
-	"SHARED_PLAYLIST": "6nSvZKOzb0qD75ATjqJTkQ",
-	"SPOTIFY_USER": "6rcq1j21davq3yhbk1t0l5xnt",
+	"PLAYLISTS": {
+		"DEFAULT": "2bQJC2lUa4pXkAt2qQejlx",
+	    "PRIMARY": "2bQJC2lUa4pXkAt2qQejlx",
+	    "BACKLOG": "79mpaUsn0LPGUyCkBRnSgZ",
+	    "SHARED": "",
+	    "VIBELOG": "49JgXL19qjfPU05HXLGHkK",
+	    "PARTY": "0hJ5nYvj9w2N2YEksxsKd1",
+	    "CHILL": "0NNZmZBrKo1Rr7Seceas7b",
+	    "SOUL": "3ofrTXsG4pbXiB1dEpLfc7",
+	    "BOUNCE": "0MDMMgNLZVV5QpGUvLQLNr",
+	    "KINETIC": "2spLi7kDdRyKgDG6uVztZL",
+	    "BLEEP": "7g26GCzQUzbrVItAC2VQOf",
+	    "GAS": "63Qriq99mF9aUvwRKOi0ig",
+	    "LOUD": "1aeIlZY9CmgcpprKZRNAxV",
+	    "WEIRD": "0re245STCEsqxkqEEftoxI",
+	    "DRAMA": "7hxvKO6TQ6yhdDZSUuQu6l",
+	    "SUN": "2CPhvLe0dPLAGSmuf9kAvs",
+	    "MAD": "0vYO9xZx3kKDwRnOLR5VX1",
+	    "MOVIE": "6Xjk6SL5D6jnRpvFjlqqoO",
+	    "SAD": "7B6V55mUyWRuMUEckUheBU",
+	    "BANGERS": "1f8cwCP17MydAzQrPejEEx",
+	    "NOSTALGIA": "2xjGNvmknS50zbxdlj5b45",
+	    "FIRE": "7byfbZ4AWbZnVVOp1WUAvk",
+		"LOVE": "5H7AzNtvBTKmmK9QgZHtDK",
+		"LIKE": "31DYh3ATYxPZpmqNQx4sDI"
+	},
+	"ALIASES": {
+		"MAHLON": "+17653387108",
+		"QUINN": "+15018176598",
+		"ZACK": "+19712227475",
+		"ME": "+19712227475"
+	},
 	"LASTFM_USER": "Nathansbud",
-	"LASTFM_WATCH_USER": "Nathansbud"
+	"LASTFM_WATCH_USER": "Nathansbud",
+	"SPOTIFY_USER": "6rcq1j21davq3yhbk1t0l5xnt"
 }
