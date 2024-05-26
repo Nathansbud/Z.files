@@ -6,6 +6,11 @@ NOT() {
     esac
 }
 
+UUID() { 
+  dscl . -read ~ GeneratedUID | sed 's/GeneratedUID: //'
+}
+
+
 DISABLED=false
 
 ## Styling Nonsense ## 
@@ -120,8 +125,42 @@ if $DISABLED; then
     cp "$KEY_DIR/Super Cute.keylayout" "$HOME_DIR/Library/Input Methods/Super Cute.keylayout"
     # TODO: Figure out how to get keyboard layout automatically added in macOS preferences
 else
-    echo "$(RED 'Super Cute setup is disabled'); manually add the keylayout to Input Methods!"
+    echo "$(RED 'Super Cute setup is disabled'); manually add the .keylayout to Input Methods!"
 fi
+
+if $DISABLED; then
+    CORE_BRIGHTNESS="/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
+    USER_KEY="CBUser-$(UUID)"
+
+    NIGHT_SHIFT_TARGET='{
+        CBBlueLightReductionCCTTargetRaw = 2700;
+        CBBlueReductionStatus =         {
+            AutoBlueReductionEnabled = 1;
+            BlueLightReductionDisableScheduleAlertCounter = 3;
+            BlueLightReductionSchedule =             {
+                DayStartHour = 5;
+                DayStartMinute = 59;
+                NightStartHour = 6;
+                NightStartMinute = 0;
+            };
+            BlueReductionAvailable = 1;
+            BlueReductionEnabled = 1;
+            BlueReductionMode = 2;
+            BlueReductionSunScheduleAllowed = 1;
+            Version = 1;
+        };
+    }'
+    
+    # Correctly updates plist file, but doesn't seem to actually work as expected, deeply frustrating
+    sudo defaults write "$CORE_BRIGHTNESS" "CBUser-0" "$NIGHT_SHIFT_TARGET"
+    sudo defaults write "$CORE_BRIGHTNESS" "$USER_KEY" "$NIGHT_SHIFT_TARGET"
+else
+    echo "$(RED 'Night Shift is disabled'); manually add scheduling under $(BLUE 'System Preferences > Displays > Night Shift options!')"
+fi
+
+
+
+
 
 # Major TODOs:
 
@@ -129,4 +168,4 @@ fi
 # Enable permanent night shift (i.e. set max night shift from 6:00 AM → 5:59 AM
 # Download the apps I want (Spotify, ...)
 # Install npm, python3
-
+# Extract subl bin
