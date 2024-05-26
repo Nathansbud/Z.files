@@ -151,9 +151,14 @@ if $DISABLED; then
         };
     }'
     
-    # Correctly updates plist file, but doesn't seem to actually work as expected, deeply frustrating
     sudo defaults write "$CORE_BRIGHTNESS" "CBUser-0" "$NIGHT_SHIFT_TARGET"
     sudo defaults write "$CORE_BRIGHTNESS" "$USER_KEY" "$NIGHT_SHIFT_TARGET"
+
+    # Correctly updates plist file, but doesn't seem to actually work as expected, deeply frustrating;
+    # restarting/killall on cfprefsd, window server, ... also does not affect things.
+    
+    # Might need to hit the CoreBrightness framework directly to get changes to actually propogate?
+    # e.g.: https://github.com/jenghis/nshift, https://github.com/smudge/nightlight, https://github.com/joshjon/nocturnal
 else
     echo "$(RED 'Night Shift is disabled'); manually add scheduling under $(BLUE 'System Preferences > Displays > Night Shift options!')"
 fi
