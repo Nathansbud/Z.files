@@ -6,3 +6,5 @@ alias github="hub browse > /dev/null 2>&1 || open 'https://github.com/Nathansbud
 
 alias gm="git diff --name-only --diff-filter=U --relative"
 alias gr="git diff --check"
+
+alias ignore-changes="git update-index --skip-worktree $@"
