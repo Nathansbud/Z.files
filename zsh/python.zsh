@@ -8,3 +8,8 @@ function sv() {
         source "$1/bin/activate";
     fi
 }
+
+# Default to using pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)" 

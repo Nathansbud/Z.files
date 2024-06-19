@@ -10,7 +10,6 @@ UUID() {
   dscl . -read ~ GeneratedUID | sed 's/GeneratedUID: //'
 }
 
-
 DISABLED=false
 
 ## Styling Nonsense ## 
@@ -21,7 +20,6 @@ BLUE() { echo "\033[1;34m$@\033[0m";}
 ### CONFIGURATION VARIABLES ###
 DEBUG=true
 NOT_DEBUG=$(NOT $DEBUG)
-
 
 SSH_PATH="$HOME_DIR/.ssh/autokey"
 GIT_NAME="Zack Amiton"
@@ -77,7 +75,11 @@ cp "$CONF_DIR/.vimrc" "$HOME_DIR/.vimrc"
 
 # Zsh Setup
 cp "$CONF_DIR/.zshrc" "$HOME_DIR/.zshrc"
-sed -i '' "s|^_PERSONAL_CONFIG_PATH=\(.*\)$|_PERSONAL_CONFIG_PATH=\($ZSH_DIR\)|" "$HOME_DIR/.zshrc"
+# sed -i '' "s|^_PERSONAL_CONFIG_PATH=\(.*\)$|_PERSONAL_CONFIG_PATH=\($ZSH_DIR\)|" "$HOME_DIR/.zshrc"
+
+sed -i '' "s|^export HOME_DIR=\(.*\)$|export HOME_DIR=\($HOME_DIR\)|" "$HOME_DIR/.zshrc"
+sed -i '' "s|^export WORK_DIR=\(.*\)$|export WORK_DIR=\($WORK_DIR\)|" "$HOME_DIR/.zshrc"
+sed -i '' "s|^export PERSONAL_DIR=\(.*\)$|export PERSONAL_DIR=\($PERSONAL_DIR\)|" "$HOME_DIR/.zshrc"
 
 # Git Setup
 find "$CONF_DIR"/git -type f -print0 | while IFS= read -r -d '' gitfile; do    
@@ -163,8 +165,18 @@ else
     echo "$(RED 'Night Shift is disabled'); manually add scheduling under $(BLUE 'System Preferences > Displays > Night Shift options!')"
 fi
 
+# Turn off startup chime
+sudo nvram StartupMute=%01
 
+# Disable autocaps, autodash, period after sentences, smart quotes
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Disable macOS quarantine
+defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 
 # Major TODOs:
@@ -174,3 +186,4 @@ fi
 # Download the apps I want (Spotify, ...)
 # Install npm, python3
 # Extract subl bin
+# Launchd / daemon setup stuff
