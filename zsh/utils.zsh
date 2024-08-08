@@ -3,6 +3,7 @@ alias copy="pbcopy"
 
 # System preference nonsense
 alias sysp='open -a "System Preferences"'
+alias finder='open -R $1'
 alias allow='(){xattr -d com.apple.quarantine $1}'
 
 # Daemon / Agent logic
