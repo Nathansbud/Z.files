@@ -175,15 +175,14 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Set Finder to have list view by default
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
 # Disable macOS quarantine
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Set all Finder windows to launch in list mode
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
-# Major TODOs:
-
-# Enable dark mode 
-# Enable permanent night shift (i.e. set max night shift from 6:00 AM → 5:59 AM
-# Download the apps I want (Spotify, ...)
-# Install npm, python3
-# Extract subl bin
-# Launchd / daemon setup stuff
+# Propogate alternate scrolling to let mouse wheel be used for tools like less 
+defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true

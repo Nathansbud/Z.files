@@ -1,6 +1,6 @@
 _BGG=(
-	"$PERSONAL_DIR"/BGGCLI/venv/bin/python3 
-	"$PERSONAL_DIR"/BGGCLI/bgg.py
+	"$PERSONAL_DIR"/BoredGamer/venv/bin/python3 
+	"$PERSONAL_DIR"/BoredGamer/bgg.py
 )
 _QUICKTEXT=("$PERSONAL_DIR"/Quicktext/text.py)
 _MATH=("$PERSONAL_DIR"/PythonNonsense/Calculator/calculator.py)
