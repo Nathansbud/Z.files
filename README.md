@@ -15,7 +15,7 @@ In a perfect world, I would simply run `zetup.zsh` and everything works, but the
 
 - Install [brew](...)
 - Install [pyenv](https://github.com/pyenv/pyenv)
-- Install [nvm](https://github.com/Nathansbud/AutomationNonsense
+- Install [nvm](https://github.com/nvm-sh/nvm)
 - Install [p10k](https://github.com/romkatv/powerlevel10k)
 
 ### Scripts & Utilities
@@ -41,6 +41,7 @@ In a perfect world, I would simply run `zetup.zsh` and everything works, but the
 
 - [iTerm2](https://iterm2.com/)
 - [Spotify](https://open.spotify.com/)
+- [MacMediaKeyForwarder](https://github.com/quentinlesceller/macmediakeyforwarder/releases)
 - [VS Code](https://code.visualstudio.com/)
 	- Add `code` to PATH
 - [Sublime](https://www.sublimetext.com/)
